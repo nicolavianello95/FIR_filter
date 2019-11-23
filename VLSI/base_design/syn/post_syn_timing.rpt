@@ -1,0 +1,149 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir
+Version: O-2018.06-SP4
+Date   : Fri Nov  8 17:25:08 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: b[16] (input port clocked by CLOCK)
+  Endpoint: reg_dout/Q_reg[13]
+            (rising edge-triggered flip-flop clocked by CLOCK)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLOCK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  b[16] (in)                                              0.00       0.50 r
+  queue_mult_1/B[2] (Mult_N14_10)                         0.00       0.50 r
+  queue_mult_1/mult_21/b[2] (Mult_N14_10_DW_mult_tc_0)
+                                                          0.00       0.50 r
+  queue_mult_1/mult_21/U669/ZN (XNOR2_X1)                 0.07       0.57 r
+  queue_mult_1/mult_21/U668/ZN (OAI22_X1)                 0.04       0.61 f
+  queue_mult_1/mult_21/U667/ZN (NAND2_X1)                 0.03       0.64 r
+  queue_mult_1/mult_21/U665/Z (MUX2_X1)                   0.05       0.69 r
+  queue_mult_1/mult_21/U422/ZN (INV_X1)                   0.02       0.71 f
+  queue_mult_1/mult_21/U662/ZN (AOI222_X1)                0.10       0.81 r
+  queue_mult_1/mult_21/U421/ZN (INV_X1)                   0.03       0.84 f
+  queue_mult_1/mult_21/U661/ZN (AOI222_X1)                0.09       0.93 r
+  queue_mult_1/mult_21/U420/ZN (INV_X1)                   0.03       0.96 f
+  queue_mult_1/mult_21/U660/ZN (AOI222_X1)                0.09       1.05 r
+  queue_mult_1/mult_21/U419/ZN (INV_X1)                   0.03       1.08 f
+  queue_mult_1/mult_21/U659/ZN (AOI222_X1)                0.09       1.17 r
+  queue_mult_1/mult_21/U416/ZN (INV_X1)                   0.03       1.20 f
+  queue_mult_1/mult_21/U658/ZN (AOI222_X1)                0.09       1.29 r
+  queue_mult_1/mult_21/U415/ZN (INV_X1)                   0.03       1.32 f
+  queue_mult_1/mult_21/U657/ZN (AOI222_X1)                0.09       1.41 r
+  queue_mult_1/mult_21/U413/ZN (INV_X1)                   0.03       1.44 f
+  queue_mult_1/mult_21/U656/ZN (AOI222_X1)                0.11       1.55 r
+  queue_mult_1/mult_21/U655/ZN (OAI222_X1)                0.07       1.61 f
+  queue_mult_1/mult_21/U654/ZN (AOI222_X1)                0.11       1.73 r
+  queue_mult_1/mult_21/U653/ZN (OAI222_X1)                0.07       1.79 f
+  queue_mult_1/mult_21/U17/CO (FA_X1)                     0.10       1.89 f
+  queue_mult_1/mult_21/U16/S (FA_X1)                      0.14       2.02 r
+  queue_mult_1/mult_21/product[14] (Mult_N14_10_DW_mult_tc_0)
+                                                          0.00       2.02 r
+  queue_mult_1/M[1] (Mult_N14_10)                         0.00       2.02 r
+  queue_add_1/B[1] (Adder_N15_0)                          0.00       2.02 r
+  queue_add_1/add_23/B[1] (Adder_N15_0_DW01_add_0)        0.00       2.02 r
+  queue_add_1/add_23/U1_1/S (FA_X1)                       0.12       2.15 f
+  queue_add_1/add_23/SUM[1] (Adder_N15_0_DW01_add_0)      0.00       2.15 f
+  queue_add_1/S[1] (Adder_N15_0)                          0.00       2.15 f
+  queue_add_2/A[1] (Adder_N15_9)                          0.00       2.15 f
+  queue_add_2/add_23/A[1] (Adder_N15_9_DW01_add_0)        0.00       2.15 f
+  queue_add_2/add_23/U1_1/CO (FA_X1)                      0.10       2.25 f
+  queue_add_2/add_23/U1_2/CO (FA_X1)                      0.09       2.34 f
+  queue_add_2/add_23/U1_3/CO (FA_X1)                      0.09       2.43 f
+  queue_add_2/add_23/U1_4/CO (FA_X1)                      0.09       2.52 f
+  queue_add_2/add_23/U1_5/CO (FA_X1)                      0.09       2.61 f
+  queue_add_2/add_23/U1_6/S (FA_X1)                       0.14       2.75 r
+  queue_add_2/add_23/SUM[6] (Adder_N15_9_DW01_add_0)      0.00       2.75 r
+  queue_add_2/S[6] (Adder_N15_9)                          0.00       2.75 r
+  queue_add_3/A[6] (Adder_N15_8)                          0.00       2.75 r
+  queue_add_3/add_23/A[6] (Adder_N15_8_DW01_add_0)        0.00       2.75 r
+  queue_add_3/add_23/U1_6/S (FA_X1)                       0.12       2.87 f
+  queue_add_3/add_23/SUM[6] (Adder_N15_8_DW01_add_0)      0.00       2.87 f
+  queue_add_3/S[6] (Adder_N15_8)                          0.00       2.87 f
+  queue_add_4/A[6] (Adder_N15_7)                          0.00       2.87 f
+  queue_add_4/add_23/A[6] (Adder_N15_7_DW01_add_0)        0.00       2.87 f
+  queue_add_4/add_23/U1_6/CO (FA_X1)                      0.10       2.97 f
+  queue_add_4/add_23/U1_7/S (FA_X1)                       0.14       3.11 r
+  queue_add_4/add_23/SUM[7] (Adder_N15_7_DW01_add_0)      0.00       3.11 r
+  queue_add_4/S[7] (Adder_N15_7)                          0.00       3.11 r
+  queue_add_5/A[7] (Adder_N15_6)                          0.00       3.11 r
+  queue_add_5/add_23/A[7] (Adder_N15_6_DW01_add_0)        0.00       3.11 r
+  queue_add_5/add_23/U1_7/S (FA_X1)                       0.12       3.22 f
+  queue_add_5/add_23/SUM[7] (Adder_N15_6_DW01_add_0)      0.00       3.22 f
+  queue_add_5/S[7] (Adder_N15_6)                          0.00       3.22 f
+  queue_add_6/A[7] (Adder_N15_5)                          0.00       3.22 f
+  queue_add_6/add_23/A[7] (Adder_N15_5_DW01_add_0)        0.00       3.22 f
+  queue_add_6/add_23/U1_7/CO (FA_X1)                      0.10       3.33 f
+  queue_add_6/add_23/U1_8/S (FA_X1)                       0.14       3.46 r
+  queue_add_6/add_23/SUM[8] (Adder_N15_5_DW01_add_0)      0.00       3.46 r
+  queue_add_6/S[8] (Adder_N15_5)                          0.00       3.46 r
+  queue_add_7/A[8] (Adder_N15_4)                          0.00       3.46 r
+  queue_add_7/add_23/A[8] (Adder_N15_4_DW01_add_0)        0.00       3.46 r
+  queue_add_7/add_23/U1_8/S (FA_X1)                       0.12       3.58 f
+  queue_add_7/add_23/SUM[8] (Adder_N15_4_DW01_add_0)      0.00       3.58 f
+  queue_add_7/S[8] (Adder_N15_4)                          0.00       3.58 f
+  queue_add_8/A[8] (Adder_N15_3)                          0.00       3.58 f
+  queue_add_8/add_23/A[8] (Adder_N15_3_DW01_add_0)        0.00       3.58 f
+  queue_add_8/add_23/U1_8/CO (FA_X1)                      0.10       3.68 f
+  queue_add_8/add_23/U1_9/S (FA_X1)                       0.14       3.82 r
+  queue_add_8/add_23/SUM[9] (Adder_N15_3_DW01_add_0)      0.00       3.82 r
+  queue_add_8/S[9] (Adder_N15_3)                          0.00       3.82 r
+  queue_add_9/A[9] (Adder_N15_2)                          0.00       3.82 r
+  queue_add_9/add_23/A[9] (Adder_N15_2_DW01_add_0)        0.00       3.82 r
+  queue_add_9/add_23/U1_9/S (FA_X1)                       0.12       3.94 f
+  queue_add_9/add_23/SUM[9] (Adder_N15_2_DW01_add_0)      0.00       3.94 f
+  queue_add_9/S[9] (Adder_N15_2)                          0.00       3.94 f
+  queue_add_10/A[9] (Adder_N15_1)                         0.00       3.94 f
+  queue_add_10/add_23/A[9] (Adder_N15_1_DW01_add_0)       0.00       3.94 f
+  queue_add_10/add_23/U1_9/CO (FA_X1)                     0.10       4.04 f
+  queue_add_10/add_23/U1_10/CO (FA_X1)                    0.09       4.13 f
+  queue_add_10/add_23/U1_11/CO (FA_X1)                    0.09       4.22 f
+  queue_add_10/add_23/U1_12/CO (FA_X1)                    0.09       4.31 f
+  queue_add_10/add_23/U1_13/CO (FA_X1)                    0.09       4.40 f
+  queue_add_10/add_23/U1_14/S (FA_X1)                     0.15       4.55 r
+  queue_add_10/add_23/SUM[14] (Adder_N15_1_DW01_add_0)
+                                                          0.00       4.55 r
+  queue_add_10/S[14] (Adder_N15_1)                        0.00       4.55 r
+  saturation_stage/SEL[1] (MUX_4to1_N14)                  0.00       4.55 r
+  saturation_stage/U4/ZN (AND2_X1)                        0.12       4.67 r
+  saturation_stage/U21/ZN (AOI22_X1)                      0.06       4.73 f
+  saturation_stage/U20/ZN (NAND2_X1)                      0.03       4.76 r
+  saturation_stage/Y[13] (MUX_4to1_N14)                   0.00       4.76 r
+  reg_dout/D[13] (reg_N14_1)                              0.00       4.76 r
+  reg_dout/U4/ZN (AOI22_X1)                               0.03       4.79 f
+  reg_dout/U3/ZN (INV_X1)                                 0.03       4.82 r
+  reg_dout/Q_reg[13]/D (DFF_X1)                           0.01       4.83 r
+  data arrival time                                                  4.83
+
+  clock CLOCK (rise edge)                                17.80      17.80
+  clock network delay (ideal)                             0.00      17.80
+  clock uncertainty                                      -0.07      17.73
+  reg_dout/Q_reg[13]/CK (DFF_X1)                          0.00      17.73 r
+  library setup time                                     -0.03      17.70
+  data required time                                                17.70
+  --------------------------------------------------------------------------
+  data required time                                                17.70
+  data arrival time                                                 -4.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                       12.87
+
+
+1

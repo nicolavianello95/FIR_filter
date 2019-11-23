@@ -1,0 +1,122 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'fir_adv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir_adv
+Version: O-2018.06-SP4
+Date   : Wed Nov 13 11:08:39 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: reg_in_A/Q_reg[1]
+              (rising edge-triggered flip-flop clocked by CLOCK)
+  Endpoint: BLOCK_A_FIR/reg_pipe03_0/Q_reg[13]
+            (rising edge-triggered flip-flop clocked by CLOCK)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_adv            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLOCK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  reg_in_A/Q_reg[1]/CK (DFF_X1)                           0.00 #     0.00 r
+  reg_in_A/Q_reg[1]/Q (DFF_X1)                            0.21       0.21 r
+  reg_in_A/Q[1] (reg_N14_0)                               0.00       0.21 r
+  BLOCK_A_FIR/DATA_IN[0][1] (fir_block_0)                 0.00       0.21 r
+  BLOCK_A_FIR/instance_mult_0/A[1] (Mult_N14_0)           0.00       0.21 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/a[1] (Mult_N14_0_DW_mult_tc_0)
+                                                          0.00       0.21 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U443/ZN (INV_X1)
+                                                          0.06       0.27 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U422/ZN (INV_X1)
+                                                          0.12       0.39 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U695/Z (XOR2_X1)
+                                                          0.11       0.50 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U423/ZN (INV_X1)
+                                                          0.07       0.57 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U693/ZN (NAND2_X1)
+                                                          0.12       0.69 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U484/ZN (OAI22_X1)
+                                                          0.06       0.76 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U108/S (HA_X1)      0.08       0.84 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U669/ZN (AOI222_X1)
+                                                          0.11       0.95 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U425/ZN (INV_X1)
+                                                          0.03       0.98 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U668/ZN (AOI222_X1)
+                                                          0.09       1.07 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U418/ZN (INV_X1)
+                                                          0.03       1.10 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U667/ZN (AOI222_X1)
+                                                          0.09       1.19 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U417/ZN (INV_X1)
+                                                          0.03       1.22 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U666/ZN (AOI222_X1)
+                                                          0.09       1.31 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U415/ZN (INV_X1)
+                                                          0.03       1.34 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U665/ZN (AOI222_X1)
+                                                          0.09       1.43 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U414/ZN (INV_X1)
+                                                          0.03       1.46 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U664/ZN (AOI222_X1)
+                                                          0.09       1.55 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U413/ZN (INV_X1)
+                                                          0.03       1.58 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U663/ZN (AOI222_X1)
+                                                          0.11       1.69 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U662/ZN (OAI222_X1)
+                                                          0.07       1.76 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U661/ZN (AOI222_X1)
+                                                          0.11       1.87 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/U660/ZN (OAI222_X1)
+                                                          0.07       1.93 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U17/CO (FA_X1)      0.10       2.03 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U16/CO (FA_X1)      0.09       2.12 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U15/CO (FA_X1)      0.09       2.21 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U14/CO (FA_X1)      0.09       2.30 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U13/CO (FA_X1)      0.09       2.39 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U12/CO (FA_X1)      0.09       2.48 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U11/CO (FA_X1)      0.09       2.57 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U10/CO (FA_X1)      0.09       2.67 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U9/CO (FA_X1)       0.09       2.76 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U8/CO (FA_X1)       0.09       2.85 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U7/CO (FA_X1)       0.09       2.94 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U6/CO (FA_X1)       0.09       3.03 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U5/CO (FA_X1)       0.09       3.12 f
+  BLOCK_A_FIR/instance_mult_0/mult_21/U4/S (FA_X1)        0.13       3.25 r
+  BLOCK_A_FIR/instance_mult_0/mult_21/product[26] (Mult_N14_0_DW_mult_tc_0)
+                                                          0.00       3.25 r
+  BLOCK_A_FIR/instance_mult_0/M[13] (Mult_N14_0)          0.00       3.25 r
+  BLOCK_A_FIR/reg_pipe03_0/D[13] (reg_N15_0)              0.00       3.25 r
+  BLOCK_A_FIR/reg_pipe03_0/U20/ZN (AOI22_X1)              0.03       3.28 f
+  BLOCK_A_FIR/reg_pipe03_0/U17/ZN (INV_X1)                0.03       3.31 r
+  BLOCK_A_FIR/reg_pipe03_0/Q_reg[13]/D (DFF_X1)           0.01       3.31 r
+  data arrival time                                                  3.31
+
+  clock CLOCK (rise edge)                                 7.80       7.80
+  clock network delay (ideal)                             0.00       7.80
+  clock uncertainty                                      -0.07       7.73
+  BLOCK_A_FIR/reg_pipe03_0/Q_reg[13]/CK (DFF_X1)          0.00       7.73 r
+  library setup time                                     -0.03       7.70
+  data required time                                                 7.70
+  --------------------------------------------------------------------------
+  data required time                                                 7.70
+  data arrival time                                                 -3.31
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+1
